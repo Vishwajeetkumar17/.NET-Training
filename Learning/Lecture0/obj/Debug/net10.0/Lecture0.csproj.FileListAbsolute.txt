@@ -12,3 +12,4 @@ E:\1 Capgemini Training Program\Learning\Lecture0\obj\Debug\net10.0\refint\Lectu
 E:\1 Capgemini Training Program\Learning\Lecture0\obj\Debug\net10.0\Lecture0.pdb
 E:\1 Capgemini Training Program\Learning\Lecture0\obj\Debug\net10.0\Lecture0.genruntimeconfig.cache
 E:\1 Capgemini Training Program\Learning\Lecture0\obj\Debug\net10.0\ref\Lecture0.dll
+E:\1 Capgemini Training Program\Learning\Lecture0\obj\Debug\net10.0\Lecture0.sourcelink.json

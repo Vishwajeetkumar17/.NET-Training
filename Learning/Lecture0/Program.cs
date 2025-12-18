@@ -9,10 +9,12 @@ namespace MyNamespace
             // Console.WriteLine("Enter Your Name : ");
             // string name = Console.ReadLine();
             // Console.WriteLine($"Hello {name}!");
-            
+
             // IsPrime.IsPrimeFun();
             // TryParse.TryParse1();
-            AreaOfCircle.Area();
+            // AreaOfCircle.Area();
+            // FeetToCenti.Convert();
+            SecondToMin.Minutes();
 
         }
     }
