@@ -1,0 +1,14 @@
+# Ignore build output
+bin/
+obj/
+
+# Ignore Visual Studio files
+.vs/
+
+# Ignore logs
+*.log
+
+# Explicitly allow C# and project files
+!**/*.cs
+**/*.csproj
+**/*.sln
