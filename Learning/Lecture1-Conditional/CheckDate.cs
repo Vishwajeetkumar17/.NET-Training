@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Validates a date (day/month/year) including leap-year logic
+    // and month-specific day limits.
     public class CheckDate
     {
         public static void ValidateDate()

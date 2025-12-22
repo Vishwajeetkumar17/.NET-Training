@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture12
 {
+    // Summary: A number guessing game where the player attempts to guess a
+    // randomly generated number between 1 and 100.
     public class GuessingGame
     {
         public static void PlayGame()

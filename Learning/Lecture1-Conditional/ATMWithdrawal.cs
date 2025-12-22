@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Simulates a basic ATM withdrawal flow including card insertion,
+    // PIN validation, amount entry, and balance check.
     public class ATMWithdrawal
     {
         public static void Withdraw()

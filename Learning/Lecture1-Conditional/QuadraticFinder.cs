@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Determines the location of a point (x, y): quadrant,
+    // axis, or origin based on its coordinates.
     internal class QuadraticFinder
     {
         public static void FindQuadrant()

@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Performs basic arithmetic operations (+, -, *, /) on two numbers
+    // based on the operator input with division-by-zero handling.
     public class SimpleCalculator
     {
         public static void Calculate()

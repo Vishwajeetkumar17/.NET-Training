@@ -1,9 +1,9 @@
-// Grade Description: Input grade (E, V, G, A, F) and print (Excellent, Very Good, Good, Average, Fail) using switch.
-
 using System;
 
 namespace Lecture1
 {
+    // Summary: Reads a single letter grade (E,V,G,A,F) and prints the
+    // corresponding description using a switch-case.
     public class GradeFinder
     {
         public static void FindGradeDescription()

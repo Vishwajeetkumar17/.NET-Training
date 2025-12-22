@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture12
 {
+    // Summary: Converts a binary string to its decimal value after validating
+    // that the input contains only 0s and 1s.
     public class BinToDec
     {
         public static void ConvertBinToDec()

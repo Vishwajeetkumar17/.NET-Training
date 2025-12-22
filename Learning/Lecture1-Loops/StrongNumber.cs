@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture12
 {
+    // Summary: Checks whether a number is a Strong number by summing the
+    // factorial of each digit and comparing to the original number.
     public class StrongNumber
     {
         public static void CheckStrongNumber()

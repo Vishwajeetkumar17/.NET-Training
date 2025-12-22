@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Calculates an electricity bill using slab-based unit rates
+    // and applies a surcharge when applicable.
     public class ElectricityBill
     {
         public static void CalculateBill()

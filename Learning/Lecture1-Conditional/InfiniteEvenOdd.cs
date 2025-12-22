@@ -3,6 +3,8 @@ namespace Lecture1
 
     public class InfiniteEvenOdd
     {
+        // Summary: Continuously reads integers and prints whether each is even or odd
+        // until the user types 'exit'.
         public bool calc(int num)
         {
             return num % 2 == 0;

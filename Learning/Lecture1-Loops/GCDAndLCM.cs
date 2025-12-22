@@ -1,9 +1,9 @@
-// GCD and LCM: Find the Greatest Common Divisor and Least Common Multiple of two numbers.
-
 using System;
 
 namespace Lecture12
 {
+    // Summary: Calculates the GCD using the Euclidean algorithm and computes
+    // the LCM of two integers.
     public class GCDAndLCM
     {
         public static void Calculate()

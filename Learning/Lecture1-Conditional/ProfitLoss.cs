@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Computes profit or loss from cost and selling price and
+    // reports the percentage gain or loss.
     public class ProfitLoss
     {
         public static void CalculateProfitOrLoss()

@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture12
 {
+    // Summary: Checks if a number is an Armstrong number by summing each digit
+    // raised to the power of the number of digits and comparing to the original.
     public class ArmstrongNumber
     {
         public static void CheckArmstrong()

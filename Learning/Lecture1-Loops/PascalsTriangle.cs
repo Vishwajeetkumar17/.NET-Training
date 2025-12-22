@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture12
 {
+    // Summary: Prints Pascal's Triangle up to a specified number of rows
+    // using iterative binomial coefficient calculation.
     public class PascalsTriangle
     {
         public static void PrintTriangle()

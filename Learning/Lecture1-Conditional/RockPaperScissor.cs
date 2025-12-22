@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Implements a two-player Rock–Paper–Scissors game using
+    // conditional logic to determine the winner or a tie.
     public class RockPaperScissor
     {
         public static void PlayGame()

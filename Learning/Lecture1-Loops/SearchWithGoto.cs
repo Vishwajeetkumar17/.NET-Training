@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture12
 {
+    // Summary: Searches for a target value in a 5x5 matrix using nested loops
+    // and a 'goto' label for early exit when found.
     public class SearchWithGoto
     {
         public static void SearchInMatrix()

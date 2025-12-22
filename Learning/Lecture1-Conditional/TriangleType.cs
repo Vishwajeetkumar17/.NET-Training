@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Determines triangle type (Equilateral, Isosceles, Scalene)
+    // from three side lengths with basic validation.
     public class TriangleType
     {
         public static void CheckTriangleType()

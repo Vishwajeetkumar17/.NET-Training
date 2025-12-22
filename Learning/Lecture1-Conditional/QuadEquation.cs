@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Solves quadratic equations (ax^2 + bx + c = 0) and prints
+    // real or complex roots based on the discriminant.
     public class QuadEquation
     {
         public static void Equation()

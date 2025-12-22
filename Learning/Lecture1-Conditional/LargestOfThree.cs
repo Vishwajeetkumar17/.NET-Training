@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Reads three integers and determines the largest among them
+    // using conditional comparisons.
     public class LargestOfThree
     {
         public static void Largest()

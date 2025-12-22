@@ -2,6 +2,8 @@
 
 namespace Lecture1
 {
+    // Summary: Entry point for running conditional statement exercises.
+    // Toggle commented lines to invoke different demos.
     public class IsEven
     {
         public static void Main(String[] args)

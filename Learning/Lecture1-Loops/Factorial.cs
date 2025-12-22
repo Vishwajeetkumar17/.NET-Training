@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture12
 {
+    // Summary: Computes the factorial of a non-negative integer iteratively
+    // using BigInteger to handle large results safely.
     public class Factorial
     {
         public static void CalculateFactorial()

@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture12
 {
+    // Summary: Generates and prints the Fibonacci series up to the specified
+    // number of terms using iterative computation.
     public class Fibbonacci
     {
         public static void GenerateFibbonacci()

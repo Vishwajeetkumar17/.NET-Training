@@ -1,9 +1,9 @@
-// Diamond Pattern: Print a diamond shape using * characters with nested loops.
-
 using System;
 
 namespace Lecture12
 {
+    // Summary: Prints a diamond shape using '*' characters via nested loops
+    // with configurable row count.
     public class DiamondPattern
     {
         public static void PrintDiamond()

@@ -1,9 +1,9 @@
-// Sum of Digits: Repeatedly sum digits of a number until the result is a single digit (Digital Root).
-
 using System;
 
 namespace Lecture12
 {
+    // Summary: Computes the digital root by repeatedly summing digits
+    // until a single-digit result remains.
     public class SumOfDigits
     {
         public static void CalculateDigitalRoot()

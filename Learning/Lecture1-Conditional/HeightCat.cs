@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Categorizes height in centimeters into Dwarf, Average, Tall,
+    // or Abnormal ranges.
     public class HeightCat
     {
         public static void HeightCategory()

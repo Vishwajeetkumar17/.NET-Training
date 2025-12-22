@@ -1,9 +1,9 @@
-// Reverse & Palindrome: Reverse an integer and check if it is a palindrome using while.
-
 using System;
 
 namespace Lecture12
 {
+    // Summary: Reverses an integer via digit extraction and checks
+    // whether it is a palindrome.
     public class Palindrome
     {
         public static void CheckPalindrome()

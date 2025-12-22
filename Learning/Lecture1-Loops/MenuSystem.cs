@@ -1,7 +1,11 @@
+// Summary: Displays a loop-driven console menu to run selected exercises
+// such as Armstrong check, Pascal's Triangle, Palindrome, and more.
 using System;
 
 namespace Lecture12
 {
+    // Summary: Displays a simple menu loop to invoke different tasks like
+    // Armstrong check, Pascal's Triangle, Palindrome, and other demos.
     public class MenuSystem
     {
         public static void ShowMenu()
@@ -16,7 +20,7 @@ namespace Lecture12
                 Console.WriteLine("4. Print Numbers Not Multiple of Three");
                 Console.WriteLine("5. Exit");
                 Console.Write("Enter your choice: ");
-                
+
                 string? input = Console.ReadLine();
                 if (!int.TryParse(input, out choice))
                 {

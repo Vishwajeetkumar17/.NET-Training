@@ -2,6 +2,8 @@ using System;
 
 namespace Lecture1
 {
+    // Summary: Counts vowels and consonants in a user-provided string,
+    // ignoring non-letter characters.
     public class CountVowelAndConsonant
     {
         public static void CountVowelsAndConsonants()
