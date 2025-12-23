@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\Subjects\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C75B09-2E7C-957E-81A2-E5CB9DE9E004}|..\\ScienceLib\\ScienceLib.csproj|e:\\1 capgemini training program\\visualstudio\\lecture3-referenceproject\\sciencelib\\aeroscience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C86124-B11C-CAC3-8633-70D687F7E80A}|Subjects.csproj|e:\\1 capgemini training program\\visualstudio\\lecture3-referenceproject\\subjects\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C86124-B11C-CAC3-8633-70D687F7E80A}|Subjects.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C75B09-2E7C-957E-81A2-E5CB9DE9E004}|..\\ScienceLib\\ScienceLib.csproj|e:\\1 capgemini training program\\visualstudio\\lecture3-referenceproject\\sciencelib\\scilogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C64E5439-B8FD-DEA6-75DA-CA4BDEEF8D02}|..\\MathsLib\\MathsLib.csproj|e:\\1 capgemini training program\\visualstudio\\lecture3-referenceproject\\mathslib\\mathslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E13685D6-10EA-4E64-83DB-F693AF6A3047}|..\\CommonLib\\CommonLib.csproj|e:\\1 capgemini training program\\visualstudio\\lecture3-referenceproject\\commonlib\\loginapps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C64E5439-B8FD-DEA6-75DA-CA4BDEEF8D02}|..\\MathsLib\\MathsLib.csproj|e:\\1 capgemini training program\\visualstudio\\lecture3-referenceproject\\mathslib\\algebra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MathsLogin.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\MathsLib\\MathsLogin.cs",
+              "RelativeDocumentMoniker": "..\\MathsLib\\MathsLogin.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\MathsLib\\MathsLogin.cs",
+              "RelativeToolTip": "..\\MathsLib\\MathsLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T06:53:42.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SciLogin.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\ScienceLib\\SciLogin.cs",
+              "RelativeDocumentMoniker": "..\\ScienceLib\\SciLogin.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\ScienceLib\\SciLogin.cs",
+              "RelativeToolTip": "..\\ScienceLib\\SciLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T06:51:41.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginApps.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\CommonLib\\LoginApps.cs",
+              "RelativeDocumentMoniker": "..\\CommonLib\\LoginApps.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\CommonLib\\LoginApps.cs",
+              "RelativeToolTip": "..\\CommonLib\\LoginApps.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T06:48:31.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AeroScience.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\ScienceLib\\AeroScience.cs",
+              "RelativeDocumentMoniker": "..\\ScienceLib\\AeroScience.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\ScienceLib\\AeroScience.cs",
+              "RelativeToolTip": "..\\ScienceLib\\AeroScience.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T04:48:00.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Algebra.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\MathsLib\\Algebra.cs",
+              "RelativeDocumentMoniker": "..\\MathsLib\\Algebra.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\MathsLib\\Algebra.cs",
+              "RelativeToolTip": "..\\MathsLib\\Algebra.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T04:47:38.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\Subjects\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture3-ReferenceProject\\Subjects\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T04:47:11.551Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

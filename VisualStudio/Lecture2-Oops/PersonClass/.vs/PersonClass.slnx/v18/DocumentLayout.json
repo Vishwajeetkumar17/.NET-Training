@@ -1,0 +1,64 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\1 Capgemini Training Program\\VisualStudio\\PersonClass\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88411F51-9A7D-3934-E35C-3A6FDA1D35BD}|PersonClass\\PersonClass.csproj|e:\\1 capgemini training program\\visualstudio\\personclass\\personclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88411F51-9A7D-3934-E35C-3A6FDA1D35BD}|PersonClass\\PersonClass.csproj|solutionrelative:personclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88411F51-9A7D-3934-E35C-3A6FDA1D35BD}|PersonClass\\PersonClass.csproj|e:\\1 capgemini training program\\visualstudio\\personclass\\personclass\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88411F51-9A7D-3934-E35C-3A6FDA1D35BD}|PersonClass\\PersonClass.csproj|solutionrelative:personclass\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Person.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\PersonClass\\PersonClass\\Person.cs",
+              "RelativeDocumentMoniker": "PersonClass\\Person.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\PersonClass\\PersonClass\\Person.cs",
+              "RelativeToolTip": "PersonClass\\Person.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwCYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T09:12:06.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\PersonClass\\PersonClass\\Program.cs",
+              "RelativeDocumentMoniker": "PersonClass\\Program.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\PersonClass\\PersonClass\\Program.cs",
+              "RelativeToolTip": "PersonClass\\Program.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAYwFgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T09:07:10.332Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

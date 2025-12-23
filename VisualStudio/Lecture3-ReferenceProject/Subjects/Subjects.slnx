@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../CommonLib/CommonLib.csproj" Id="e13685d6-10ea-4e64-83db-f693af6a3047" />
+  <Project Path="../MathsLib/MathsLib.csproj" />
+  <Project Path="../ScienceLib/ScienceLib.csproj" />
+  <Project Path="Subjects.csproj" />
+</Solution>

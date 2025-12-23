@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|e:\\1 capgemini training program\\visualstudio\\lecture2-oops\\constructorclass\\constructorclass\\father.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|solutionrelative:constructorclass\\father.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|e:\\1 capgemini training program\\visualstudio\\lecture2-oops\\constructorclass\\constructorclass\\loghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|solutionrelative:constructorclass\\loghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|e:\\1 capgemini training program\\visualstudio\\lecture2-oops\\constructorclass\\constructorclass\\classfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|solutionrelative:constructorclass\\classfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|e:\\1 capgemini training program\\visualstudio\\lecture2-oops\\constructorclass\\constructorclass\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|solutionrelative:constructorclass\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|e:\\1 capgemini training program\\visualstudio\\lecture2-oops\\constructorclass\\constructorclass\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|solutionrelative:constructorclass\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|e:\\1 capgemini training program\\visualstudio\\lecture2-oops\\constructorclass\\constructorclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|solutionrelative:constructorclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|e:\\1 capgemini training program\\visualstudio\\lecture2-oops\\constructorclass\\constructorclass\\one.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|solutionrelative:constructorclass\\one.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|e:\\1 capgemini training program\\visualstudio\\lecture2-oops\\constructorclass\\constructorclass\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBAA96A-FA9E-0D4A-D5A7-A87B0ED70BFC}|ConstructorCLass\\ConstructorCLass.csproj|solutionrelative:constructorclass\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Father.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Father.cs",
+              "RelativeDocumentMoniker": "ConstructorCLass\\Father.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Father.cs",
+              "RelativeToolTip": "ConstructorCLass\\Father.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAWwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T10:28:40.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Account.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Account.cs",
+              "RelativeDocumentMoniker": "ConstructorCLass\\Account.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Account.cs",
+              "RelativeToolTip": "ConstructorCLass\\Account.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T09:41:10.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Employee.cs",
+              "RelativeDocumentMoniker": "ConstructorCLass\\Employee.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Employee.cs",
+              "RelativeToolTip": "ConstructorCLass\\Employee.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T08:48:05.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClassField.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\ClassField.cs",
+              "RelativeDocumentMoniker": "ConstructorCLass\\ClassField.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\ClassField.cs",
+              "RelativeToolTip": "ConstructorCLass\\ClassField.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T07:27:45.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LogHistory.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\LogHistory.cs",
+              "RelativeDocumentMoniker": "ConstructorCLass\\LogHistory.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\LogHistory.cs",
+              "RelativeToolTip": "ConstructorCLass\\LogHistory.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T06:42:04.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "One.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\One.cs",
+              "RelativeDocumentMoniker": "ConstructorCLass\\One.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\One.cs",
+              "RelativeToolTip": "ConstructorCLass\\One.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T05:03:12.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Add.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Add.cs",
+              "RelativeDocumentMoniker": "ConstructorCLass\\Add.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Add.cs",
+              "RelativeToolTip": "ConstructorCLass\\Add.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T06:15:57.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Program.cs",
+              "RelativeDocumentMoniker": "ConstructorCLass\\Program.cs",
+              "ToolTip": "E:\\1 Capgemini Training Program\\VisualStudio\\Lecture2-Oops\\ConstructorCLass\\ConstructorCLass\\Program.cs",
+              "RelativeToolTip": "ConstructorCLass\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T04:50:33.826Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
