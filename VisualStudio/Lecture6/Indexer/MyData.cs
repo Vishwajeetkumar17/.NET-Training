@@ -25,7 +25,7 @@ namespace Indexer
     {
         static void Main()
         {
-            Employee obj = new Employee();
+            MyData obj = new MyData();
             obj[0] = "c";
             obj[1] = "c++";
             obj[2] = "c#";
