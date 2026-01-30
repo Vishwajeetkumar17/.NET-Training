@@ -78,12 +78,20 @@
                 Name = "Annu",
                 Marks = 560
             });
+            students.Add(new Student
+            {
+                Name = "AAAA",
+                Marks = 500
+            });
             students.Sort();
-            int rank = 1;
+            int rank = 0;
+            int prevMarks = 0;
             foreach(Student student in students)
             {
-                Console.Write($"Rank = {rank++} Name = {student.Name}, Marks = {student.Marks}, Remarks: ");
+                if (prevMarks != student.Marks) rank++;
+                Console.Write($"Rank = {rank} Name = {student.Name}, Marks = {student.Marks}, Remarks: ");
                 s.SendNotification(student);
+                prevMarks = student.Marks;
                 Console.WriteLine();
             }
         }
