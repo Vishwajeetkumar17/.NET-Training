@@ -1,28 +1,28 @@
 ﻿namespace OnlineSession
 {
-    //public class Employee
-    //{
-    //    public string Id { get; set; }
-    //    public string Name { get; set; }
-    //    public decimal Salary { get; set; }
+    public class Employee
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public decimal Salary { get; set; }
 
-    //    //public Employee(string id, string name, decimal salary)
-    //    //{
-    //    //    Id = id;
-    //    //    Name = name;
-    //    //    Salary = salary;
+        //public Employee(string id, string name, decimal salary)
+        //{
+        //    Id = id;
+        //    Name = name;
+        //    Salary = salary;
 
-    //    //    Console.WriteLine($"Id : {Id}, Name : {Name}, Salary : {Salary}");
-    //    //}
+        //    Console.WriteLine($"Id : {Id}, Name : {Name}, Salary : {Salary}");
+        //}
 
-    //    public static void Main(string[] args)
-    //    {
-    //        Employee emp = new Employee { Id = "E101", Name = "Vishwajeet", Salary = 10000m };
-    //        Console.WriteLine(emp.Id);
-    //        Console.WriteLine(emp.Name);
-    //        Console.WriteLine(emp.Salary);
-    //    }
-    //}
+        public static void Main(string[] args)
+        {
+            Employee emp = new Employee { Id = "E101", Name = "Vishwajeet", Salary = 10000m };
+            Console.WriteLine(emp.Id);
+            Console.WriteLine(emp.Name);
+            Console.WriteLine(emp.Salary);
+        }
+    }
 
     public class Person : IComparable<Person>
     {
