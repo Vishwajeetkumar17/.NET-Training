@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../NUnitTestCaseValidation/NUnitTestCaseValidation.csproj" />
+  <Project Path="../TestValidation/TestValidation.csproj" />
+</Solution>

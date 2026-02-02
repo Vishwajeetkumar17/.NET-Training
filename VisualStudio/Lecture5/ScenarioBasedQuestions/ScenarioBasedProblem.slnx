@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="FactoryRobortHazardAnalyzer/ScenarioBasedProblem.csproj" />
+  <Project Path="FlipKeyLogicalProblem/FlipKeyLogicalProblem.csproj" Id="8bc60de5-5fc9-4a3f-b98e-52c2bc943226" />
 </Solution>
