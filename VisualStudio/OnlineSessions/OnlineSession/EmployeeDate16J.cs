@@ -1,6 +1,6 @@
 ﻿namespace OnlineSession
 {
-    public class Employee
+    public class EmployeeDate16J
     {
         public string Id { get; set; }
         public string Name { get; set; }
@@ -17,7 +17,7 @@
 
         public static void Main(string[] args)
         {
-            Employee emp = new Employee { Id = "E101", Name = "Vishwajeet", Salary = 10000m };
+            EmployeeDate16J emp = new EmployeeDate16J { Id = "E101", Name = "Vishwajeet", Salary = 10000m };
             Console.WriteLine(emp.Id);
             Console.WriteLine(emp.Name);
             Console.WriteLine(emp.Salary);

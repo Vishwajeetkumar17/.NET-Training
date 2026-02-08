@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
+// 30 Jan
 namespace OnlineSession
 {
-    public class Bike
+    public class BikeDate30J
     {
         public string Model { get; set; }
         public string Brand { get; set; }
@@ -16,7 +17,7 @@ namespace OnlineSession
         public void AddBikeDetails(string model, string brand, int pricePerDay)
         {
             int key = Program.bikeDetails.Count + 1;
-            Bike bike = new Bike
+            BikeDate30J bike = new BikeDate30J
             {
                 Model = model,
                 Brand = brand,
@@ -25,14 +26,14 @@ namespace OnlineSession
             Program.bikeDetails.Add(key, bike);
         }
 
-        public SortedDictionary<string, List<Bike>> GroupBikesByBrand()
+        public SortedDictionary<string, List<BikeDate30J>> GroupBikesByBrand()
         {
-            SortedDictionary<string, List<Bike>> groupedBike = new();
+            SortedDictionary<string, List<BikeDate30J>> groupedBike = new SortedDictionary<string, List<BikeDate30J>>();
             foreach (var item in Program.bikeDetails.Values)
             {
                 if (!groupedBike.ContainsKey(item.Brand))
                 {
-                    groupedBike[item.Brand] = new List<Bike>();
+                    groupedBike[item.Brand] = new List<BikeDate30J>();
                 }
                 groupedBike[item.Brand].Add(item);
             }
@@ -42,7 +43,7 @@ namespace OnlineSession
     }
     public class Program
     {
-        public static SortedDictionary<int, Bike> bikeDetails = new();
+        public static SortedDictionary<int, BikeDate30J> bikeDetails = new();
         static void Main()
         {
             BikeUtility utility = new BikeUtility();
@@ -68,13 +69,13 @@ namespace OnlineSession
                 }
                 else if (choice == 2)
                 {
-                    SortedDictionary<string, List<Bike>> groupedBikes = utility.GroupBikesByBrand();
+                    SortedDictionary<string, List<BikeDate30J>> groupedBikes = utility.GroupBikesByBrand();
                     foreach (var item in groupedBikes)
                     {
                         Console.WriteLine(item.Key);
                         foreach (var item2 in item.Value)
                         {
-                            
+
                             Console.WriteLine(item2.Model);
                         }
                         Console.WriteLine();
