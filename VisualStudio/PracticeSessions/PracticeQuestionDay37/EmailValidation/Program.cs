@@ -13,7 +13,7 @@
             {
                 return false;
             }
-            string[] check = message.Split("@");
+            string[] check = message.Split('@');
             if(check.Length != 2)
             {
                 return false;
@@ -25,12 +25,9 @@
             List<char> invalidChars = new List<char>() { '_', '&', '=', '+', '-', '*', '/', '\'', ',', '<', '>', '!', ' ' };
             foreach (var item in check[0])
             {
-                foreach (char ch in invalidChars)
+                if (invalidChars.Contains(item))
                 {
-                    if (ch == item)
-                    {
-                        return false;
-                    }
+                    return false;
                 }
             }
             if (check.Contains(".."))
