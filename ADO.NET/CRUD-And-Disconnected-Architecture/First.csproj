@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>First.Delete</StartupObject>
+    <StartupObject>First.DisconnectedArchitecture</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
