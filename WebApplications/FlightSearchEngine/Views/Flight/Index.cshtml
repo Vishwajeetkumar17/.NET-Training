@@ -1,0 +1,53 @@
+﻿@model SearchViewModel
+
+<form asp-controller="Flight" method="post">
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div>
+        <label>Source</label>
+        <select asp-for="Source" asp-items="Model.SourceList" class="form-control"></select>
+        <span asp-validation-for="Source" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Destination</label>
+        <select asp-for="Destination" asp-items="Model.DestinationList" class="form-control"></select>
+        <span asp-validation-for="Destination" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Number of Persons</label>
+        <input asp-for="NumberOfPersons" type="number" class="form-control" />
+        <span asp-validation-for="NumberOfPersons" class="text-danger"></span>
+    </div>
+
+    <br />
+
+    <button type="submit" asp-action="SearchFlights"
+            class="btn btn-success">
+        Search Flights Only
+    </button>
+
+    <button type="submit" asp-action="SearchFlightsWithHotels"
+            class="btn btn-warning">
+        Search Flight + Hotel
+    </button>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function (e) {
+            var source = document.querySelector("#Source").value;
+            var destination = document.querySelector("#Destination").value;
+
+            if (source === destination) {
+                alert("Source and Destination cannot be the same.");
+                e.preventDefault();
+            }
+        });
+    </script>
+}

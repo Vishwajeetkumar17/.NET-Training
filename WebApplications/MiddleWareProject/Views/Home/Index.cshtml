@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Description"] = "Page Description";
+    ViewData["First"] = "India";
+    ViewData["Second"] = "US";
+    string[] countries = ViewBag.Countries.Split(',');
+}
+
+<div class="text-center">
+    @foreach(var item in countries)
+    {
+        <p>@item</p>
+    }
+    @foreach(var item in ViewData)
+    {
+        <p>Key : @item.Key | 
+            Value : @item.Value
+        </p>
+    }
+</div>

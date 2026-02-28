@@ -1,0 +1,68 @@
+@model IEnumerable<object>
+
+<h3>Search Results</h3>
+
+@if (Model == null || !Model.Any())
+{
+    <h4>No results found</h4>
+}
+else
+{
+    if (ViewBag.SearchType == "FlightOnly")
+    {
+        var flights = Model.Cast<FlightResult>();
+
+        <table class="table table-bordered">
+            <tr>
+                <th>FlightId</th>
+                <th>FlightName</th>
+                <th>FlightType</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>TotalCost</th>
+            </tr>
+
+            @foreach (var item in flights)
+            {
+                <tr>
+                    <td>@item.FlightId</td>
+                    <td>@item.FlightName</td>
+                    <td>@item.FlightType</td>
+                    <td>@item.Source</td>
+                    <td>@item.Destination</td>
+                    <td>@item.TotalCost</td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        var packages = Model.Cast<FlightHotelResult>();
+
+        <table class="table table-bordered">
+            <tr>
+                <th>FlightId</th>
+                <th>FlightName</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>HotelName</th>
+                <th>TotalCost</th>
+            </tr>
+
+            @foreach (var item in packages)
+            {
+                <tr>
+                    <td>@item.FlightId</td>
+                    <td>@item.FlightName</td>
+                    <td>@item.Source</td>
+                    <td>@item.Destination</td>
+                    <td>@item.HotelName</td>
+                    <td>@item.TotalCost</td>
+                </tr>
+            }
+        </table>
+    }
+}
+
+<br />
+<a asp-action="Index" class="btn btn-primary">Back to Search</a>
