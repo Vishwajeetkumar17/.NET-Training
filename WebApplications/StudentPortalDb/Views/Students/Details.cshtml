@@ -1,0 +1,54 @@
+﻿@model StudentPortalDb.Models.Student
+
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<div class="student-details-container">
+    <div class="details-card">
+        <div class="card-header">
+            <h2>Student Details</h2>
+        </div>
+
+        <div class="card-body">
+            <div class="detail-item">
+                <span class="label">Full Name</span>
+                <span class="value">@Model.FullName</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Email</span>
+                <span class="value">@Model.Email</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Phone</span>
+                <span class="value">@Model.Phone</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Status</span>
+                <span class="value status-badge">@Model.Status</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Join Date</span>
+                <span class="value">@Model.JoinDate.ToString("dd MMM yyyy")</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Created At</span>
+                <span class="value">@Model.CreatedAt.ToString("dd MMM yyyy")</span>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <a asp-action="Edit" asp-route-id="@Model?.StudentId" class="btn btn-primary">
+                Edit
+            </a>
+            <a asp-action="Index" class="btn btn-secondary">
+                Back to List
+            </a>
+        </div>
+    </div>
+</div>

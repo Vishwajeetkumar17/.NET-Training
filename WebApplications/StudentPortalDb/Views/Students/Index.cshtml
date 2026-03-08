@@ -1,0 +1,102 @@
+﻿@model IEnumerable<StudentPortalDb.Models.Student>
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h2>Students</h2>
+
+<div class="mb-3 d-flex">
+    <input type="text" id="searchBox" class="form-control me-2" placeholder="Search by name or email..." />
+    <button id="searchBtn" class="btn btn-primary">Search</button>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Join Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="studentTable">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td>@item.Status</td>
+                <td>@item.JoinDate</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.StudentId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.StudentId" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.StudentId" class="btn btn-sm btn-danger text-white">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+
+    <script>
+
+        // When user types (live search)
+        document.getElementById("searchBox").addEventListener("keyup", function () {
+            searchStudents();
+        });
+
+        // When button is clicked
+        document.getElementById("searchBtn").addEventListener("click", function () {
+            searchStudents();
+        });
+
+        function searchStudents() {
+
+            var query = document.getElementById("searchBox").value;
+
+            fetch("/Students/Search?q=" + query)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+
+                    var tableBody = document.getElementById("studentTable");
+                    tableBody.innerHTML = "";
+
+                    if (data.length === 0) {
+                        tableBody.innerHTML =
+                            "<tr><td colspan='6' class='text-center'>No records found</td></tr>";
+                        return;
+                    }
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        var student = data[i];
+
+                        var row = "<tr>";
+                        row += "<td>" + student.fullName + "</td>";
+                        row += "<td>" + student.email + "</td>";
+                        row += "<td>" + student.phone + "</td>";
+                        row += "<td>" + student.status + "</td>";
+                        row += "<td>" + student.joinDate + "</td>";
+                        row += "<td>";
+                        row += "<a class='btn btn-sm btn-warning' href='/Students/Edit/" + student.studentId + "'>Edit</a> ";
+                        row += "<a class='btn btn-sm btn-info' href='/Students/Details/" + student.studentId + "'>Details</a> ";
+                        row += "<a class='btn btn-sm btn-danger text-white' href='/Students/Delete/" + student.studentId + "'>Delete</a>";
+                        row += "</td>";
+                        row += "</tr>";
+
+                        tableBody.innerHTML += row;
+                    }
+
+                });
+        }
+
+    </script>
+
+}

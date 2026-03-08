@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page 4</title>
+</head>
+
+<body>
+    <h2>Page 4</h2>
+    <p>Name: <span id="name"></span></p>
+    <p>Location: <span id="location"></span></p>
+    <script>
+        document.getElementById('name').textContent = sessionStorage.getItem('name') || '';
+        document.getElementById('location').textContent = sessionStorage.getItem('location') || '';
+    </script>
+</body>
+
+</html>

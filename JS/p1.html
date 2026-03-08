@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page 1</title>
+</head>
+
+<body>
+    <h2>Page 1</h2>
+    <form onsubmit="event.preventDefault(); saveAndNext();">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+        <button type="submit">Next</button>
+    </form>
+    <script>
+        function saveAndNext() {
+            const name = document.getElementById('name').value;
+            const location = document.getElementById('location').value;
+            sessionStorage.setItem('name', name);
+            sessionStorage.setItem('location', location);
+            window.location.href = 'p2.html';
+        }
+    </script>
+</body>
+
+</html>

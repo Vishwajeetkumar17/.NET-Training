@@ -1,0 +1,200 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.student-details-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.details-card {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.card-header {
+    background: #1f2937;
+    color: white;
+    padding: 20px;
+}
+
+    .card-header h2 {
+        margin: 0;
+        font-size: 22px;
+    }
+
+.card-body {
+    padding: 25px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+    .detail-item:last-child {
+        border-bottom: none;
+    }
+
+.label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.value {
+    color: #111827;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 13px;
+}
+
+.card-footer {
+    padding: 20px;
+    text-align: right;
+    background: #f9fafb;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #1d4ed8;
+    }
+
+.btn-secondary {
+    background-color: #6b7280;
+    color: white;
+}
+
+    .btn-secondary:hover {
+        background-color: #4b5563;
+    }
+/* Page Title */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Create Button */
+a[asp-action="Create"] {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+    a[asp-action="Create"]:hover {
+        background-color: #1e40af;
+    }
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    /* Table Header */
+    .table thead {
+        background-color: #f3f4f6;
+    }
+
+    .table th {
+        text-align: left;
+        padding: 12px 14px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #374151;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* Table Body */
+    .table td {
+        padding: 12px 14px;
+        font-size: 14px;
+        color: #4b5563;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* Row Hover Effect */
+    .table tbody tr:hover {
+        background-color: #f9fafb;
+    }
+
+    /* Action Links */
+    .table td a {
+        text-decoration: none;
+        font-size: 13px;
+        margin-right: 6px;
+        color: #2563eb;
+        font-weight: 500;
+    }
+
+        .table td a:hover {
+            text-decoration: underline;
+        }
+
+        /* Delete link in red */
+        .table td a:last-child {
+            color: #dc2626;
+        }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="dropdown">
+        <option value="">Select a state</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Haryana">Haryana</option>
+    </select>
+    <button onclick="showSelected()">Show Selected</button>
+    <p id="result"></p>
+    <script>
+        function showSelected() {
+            var dropdown = document.getElementById("dropdown");
+            var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+            var result = document.getElementById("result");
+            if (selectedValue) {
+                result.innerHTML = "Selected: " + selectedValue;
+            } else {
+                alert("Please select an option");
+                result.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
