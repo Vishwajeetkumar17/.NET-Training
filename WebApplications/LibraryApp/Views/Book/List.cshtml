@@ -1,0 +1,31 @@
+﻿@model IEnumerable<LibraryApp.Models.Book>
+
+<h2>Book List</h2>
+<p><strong>Data Source:</strong> @ViewBag.RepositoryName</p>
+
+<a asp-action="Create">Add New Book</a>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.BookId</td>
+            <td>@book.Title</td>
+            <td>@book.Author</td>
+            <td>@book.Price</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@book.BookId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@book.BookId">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
