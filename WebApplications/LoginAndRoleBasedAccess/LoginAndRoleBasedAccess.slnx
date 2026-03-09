@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../ViewsForWebApi/ViewsForWebApi.csproj" />
+  <Project Path="LoginAndRoleBasedAccess.csproj" />
+</Solution>
