@@ -1,8 +1,6 @@
-using LibraryApp.Data;
-using LibraryApp.Repositories;
-using Microsoft.EntityFrameworkCore;
+using MVCProject.Services;
 
-namespace LibraryApp
+namespace MVCProject
 {
     public class Program
     {
@@ -10,17 +8,13 @@ namespace LibraryApp
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddDbContext<LibraryDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-            // phase 1
-            builder.Services.AddSingleton<IBookRepository, MemoryBookRepository>();
-
-            // phase 2
-            builder.Services.AddScoped<IBookRepository, SqlBookRepository>();
-
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddHttpClient("FoodApi", client =>
+            {
+                client.BaseAddress = new Uri(builder.Configuration["ApiSettings:BaseUrl"]!);
+            });
+            builder.Services.AddScoped<IFoodApiService, FoodApiService>();
 
             var app = builder.Build();
 
@@ -28,6 +22,7 @@ namespace LibraryApp
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -39,7 +34,7 @@ namespace LibraryApp
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Book}/{action=List}/{id?}")
+                pattern: "{controller=Home}/{action=Index}/{id?}")
                 .WithStaticAssets();
 
             app.Run();

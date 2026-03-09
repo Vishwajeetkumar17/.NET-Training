@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MVCProject/MVCProject.csproj" Id="6b9a19aa-d5dc-4e15-a191-fab71302ecad" />
+  <Project Path="PrintingData/PrintingData.csproj" Id="4e3835b3-cde0-4af1-ba41-5acb76f0dafa" />
+  <Project Path="TaskClassLibrary/TaskClassLibrary.csproj" />
+  <Project Path="WebApiProject/WebApiProject.csproj" Id="24358e94-53dc-4f39-94d5-69dc33bafa4a" />
+</Solution>
