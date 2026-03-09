@@ -1,0 +1,62 @@
+@model ViewsForWebApi.Models.AddGradeRequestModel
+@{
+    ViewData["Title"] = "Add Grade";
+}
+
+<div class="glass-card p-4">
+    <h2 class="page-title mb-1">Add Grade to Student</h2>
+    <p class="text-muted mb-4"><span class="route-chip">POST</span>/api/Staff/grades</p>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+    @if (ViewBag.Success != null)
+    {
+        <div class="alert alert-success">@ViewBag.Success</div>
+    }
+
+    <form asp-action="AddGrade" method="post" class="row g-3">
+        <input type="hidden" asp-for="StudentId" />
+        
+        <div class="col-md-6">
+            <label asp-for="CourseId" class="form-label"></label>
+            <select asp-for="CourseId" class="form-select">
+                <option value="">-- Select Course --</option>
+                <option value="1">Mathematics</option>
+                <option value="2">Physics</option>
+                <option value="3">Computer Science</option>
+            </select>
+            <span asp-validation-for="CourseId" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Marks" class="form-label"></label>
+            <input asp-for="Marks" type="number" min="0" max="100" step="0.01" class="form-control" placeholder="0-100" />
+            <span asp-validation-for="Marks" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Grade" class="form-label"></label>
+            <select asp-for="Grade" class="form-select">
+                <option value="">-- Select Grade --</option>
+                <option value="A+">A+ (90-100)</option>
+                <option value="A">A (80-89)</option>
+                <option value="B">B (70-79)</option>
+                <option value="C">C (60-69)</option>
+                <option value="D">D (50-59)</option>
+                <option value="F">F (Below 50)</option>
+            </select>
+            <span asp-validation-for="Grade" class="text-danger"></span>
+        </div>
+
+        <div class="col-12 d-flex gap-2">
+            <button type="submit" class="btn btn-primary px-4">Submit Grade</button>
+            <a asp-action="SelectStudentForGrade" class="btn btn-outline-secondary">Back</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

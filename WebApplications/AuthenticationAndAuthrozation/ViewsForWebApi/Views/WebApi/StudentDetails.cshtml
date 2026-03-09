@@ -1,0 +1,96 @@
+@model ViewsForWebApi.Models.StudentDetailDto
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<div class="glass-card p-4">
+    <h2 class="page-title mb-1">Student Details</h2>
+    <p class="text-muted mb-4"><span class="route-chip">GET</span>/api/Admin/students/{id}</p>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-6">
+            <div class="border rounded p-3 bg-light-subtle">
+                <small class="text-muted">ID</small>
+                <div class="fw-semibold">@Model.Id</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border rounded p-3 bg-light-subtle">
+                <small class="text-muted">User ID</small>
+                <div class="fw-semibold">@Model.UserId</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border rounded p-3 bg-light-subtle">
+                <small class="text-muted">Username</small>
+                <div class="fw-semibold">@Model.Username</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border rounded p-3 bg-light-subtle">
+                <small class="text-muted">Email</small>
+                <div class="fw-semibold">@Model.Email</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border rounded p-3 bg-light-subtle">
+                <small class="text-muted">Enrollment Number</small>
+                <div class="fw-semibold"><span class="badge text-bg-info">@Model.EnrollmentNumber</span></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border rounded p-3 bg-light-subtle">
+                <small class="text-muted">Date of Birth</small>
+                <div class="fw-semibold">@Model.DateOfBirth</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border rounded p-3 bg-light-subtle">
+                <small class="text-muted">Phone Number</small>
+                <div class="fw-semibold">@Model.PhoneNumber</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border rounded p-3 bg-light-subtle">
+                <small class="text-muted">Enrolled At</small>
+                <div class="fw-semibold">@Model.EnrolledAt.ToString("dd MMM yyyy HH:mm")</div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="mb-3">Marks / Grades</h5>
+    @if (Model.Grades == null || Model.Grades.Count == 0)
+    {
+        <div class="alert alert-info">No marks found for this student.</div>
+    }
+    else
+    {
+        <div class="table-responsive mb-4">
+            <table class="table table-hover align-middle border">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                        <th>Staff</th>
+                        <th>Graded At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var grade in Model.Grades)
+                    {
+                        <tr>
+                            <td>@grade.CourseName</td>
+                            <td>@grade.Marks</td>
+                            <td><span class="badge text-bg-success">@grade.Grade</span></td>
+                            <td>@grade.StaffName</td>
+                            <td>@grade.GradedAt.ToString("dd MMM yyyy HH:mm")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <a asp-action="AdminStudents" class="btn btn-outline-secondary">Back to Students</a>
+</div>

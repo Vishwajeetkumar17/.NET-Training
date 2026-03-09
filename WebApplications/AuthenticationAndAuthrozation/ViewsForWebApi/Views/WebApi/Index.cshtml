@@ -1,0 +1,93 @@
+@{
+    ViewData["Title"] = "Web API Playground";
+}
+
+<h2 class="page-title">Web API Playground</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<div class="glass-card p-4 mb-4">
+    <h5 class="mb-3">Session</h5>
+    <div class="row g-3">
+        <div class="col-md-4"><strong>Username:</strong> @(ViewBag.Username ?? "Not logged in")</div>
+        <div class="col-md-4"><strong>Role:</strong> @(ViewBag.Role ?? "N/A")</div>
+        <div class="col-md-4 text-md-end">
+            @if (ViewBag.Token != null)
+            {
+                <form asp-action="Logout" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-outline-danger">Logout</button>
+                </form>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-lg-6">
+        <div class="glass-card p-3 h-100">
+            <h6 class="mb-3">Authentication</h6>
+            <div class="d-grid gap-2">
+                <a asp-action="Signup" class="btn btn-light text-start"><span class="route-chip">POST</span>/api/Auth/signup</a>
+                <a asp-action="Login" class="btn btn-light text-start"><span class="route-chip">POST</span>/api/Auth/login</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="glass-card p-3 h-100">
+            <h6 class="mb-3">Admin - User Management</h6>
+            <div class="d-grid gap-2">
+                <a asp-action="AdminDashboard" class="btn btn-light text-start"><span class="route-chip">GET</span>/api/Admin/dashboard</a>
+                <a asp-action="AdminUsers" class="btn btn-light text-start"><span class="route-chip">GET</span>/api/Admin/users</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="glass-card p-3 h-100">
+            <h6 class="mb-3">Admin - Student Management</h6>
+            <div class="d-grid gap-2">
+                <a asp-action="AdminStudents" class="btn btn-light text-start"><span class="route-chip">GET</span>/api/Admin/students</a>
+                <a asp-action="CreateStudent" class="btn btn-light text-start"><span class="route-chip">POST</span>/api/Admin/students</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="glass-card p-3 h-100">
+            <h6 class="mb-3">Admin - Staff Management</h6>
+            <div class="d-grid gap-2">
+                <a asp-action="AdminStaff" class="btn btn-light text-start"><span class="route-chip">GET</span>/api/Admin/staff</a>
+                <a asp-action="CreateStaff" class="btn btn-light text-start"><span class="route-chip">POST</span>/api/Admin/staff</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="glass-card p-3 h-100">
+            <h6 class="mb-3">Staff - Dashboard & Grades</h6>
+            <div class="d-grid gap-2">
+                <a asp-action="StaffDashboard" class="btn btn-light text-start"><span class="route-chip">GET</span>/api/Staff/dashboard</a>
+                <a asp-action="SelectStudentForGrade" class="btn btn-light text-start"><span class="route-chip">POST</span>/api/Staff/grades</a>
+                <a asp-action="MyGrades" class="btn btn-light text-start"><span class="route-chip">GET</span>/api/Staff/grades</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="glass-card p-3 h-100">
+            <h6 class="mb-3">Student - Dashboard & Courses</h6>
+            <div class="d-grid gap-2">
+                <a asp-action="StudentDashboard" class="btn btn-light text-start"><span class="route-chip">GET</span>/api/Student/dashboard</a>
+                <a asp-action="StudentCourses" class="btn btn-light text-start"><span class="route-chip">GET</span>/api/Student/courses</a>
+            </div>
+        </div>
+    </div>
+</div>

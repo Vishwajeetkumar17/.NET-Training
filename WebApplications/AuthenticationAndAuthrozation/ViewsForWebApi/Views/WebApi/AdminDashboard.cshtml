@@ -1,0 +1,32 @@
+@model ViewsForWebApi.Models.DashboardResponseModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="glass-card p-4">
+    <h2 class="page-title mb-1">Admin Dashboard</h2>
+    <p class="text-muted mb-4"><span class="route-chip">GET</span>/api/Admin/dashboard</p>
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="border rounded p-3 h-100 bg-light-subtle">
+                <small class="text-muted">Message</small>
+                <div class="fw-semibold">@Model.Message</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="border rounded p-3 h-100 bg-light-subtle">
+                <small class="text-muted">User</small>
+                <div class="fw-semibold">@Model.User</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="border rounded p-3 h-100 bg-light-subtle">
+                <small class="text-muted">Total Users</small>
+                <div class="fw-semibold">@Model.TotalUsers</div>
+            </div>
+        </div>
+    </div>
+
+    <a asp-action="Index" class="btn btn-outline-secondary mt-4">Back</a>
+</div>

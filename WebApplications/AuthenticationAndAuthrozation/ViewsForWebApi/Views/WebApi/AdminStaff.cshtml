@@ -1,0 +1,67 @@
+@model List<ViewsForWebApi.Models.StaffDetailDto>
+@{
+    ViewData["Title"] = "Staff Management";
+}
+
+<div class="glass-card p-4">
+    <h2 class="page-title mb-1">Staff Management</h2>
+    <p class="text-muted mb-4"><span class="route-chip">GET</span>/api/Admin/staff</p>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <div class="mb-3">
+        <a asp-action="CreateStaff" class="btn btn-primary">+ Add New Staff Member</a>
+    </div>
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-info">No staff members found.</div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover align-middle border">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Grades Assigned</th>
+                        <th>Created At</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var staff in Model)
+                    {
+                        <tr>
+                            <td>@staff.Id</td>
+                            <td class="fw-semibold">@staff.Username</td>
+                            <td>@staff.Email</td>
+                            <td><span class="badge text-bg-warning">@staff.Role</span></td>
+                            <td><span class="badge text-bg-primary">@staff.GradesAssigned</span></td>
+                            <td>@staff.CreatedAt.ToString("dd MMM yyyy")</td>
+                            <td>
+                                <a asp-action="StaffDetails" asp-route-id="@staff.Id" class="btn btn-sm btn-outline-primary">View</a>
+                                <form asp-action="DeleteStaff" method="post" class="d-inline">
+                                    <input type="hidden" name="id" value="@staff.Id" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <a asp-action="Index" class="btn btn-outline-secondary mt-4">Back</a>
+</div>

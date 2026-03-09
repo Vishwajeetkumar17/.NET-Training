@@ -1,0 +1,57 @@
+@model List<ViewsForWebApi.Models.StudentGradeDto>
+@{
+    ViewData["Title"] = "My Grades (Staff)";
+}
+
+<div class="glass-card p-4">
+    <h2 class="page-title mb-1">Grades Assigned by Me</h2>
+    <p class="text-muted mb-4"><span class="route-chip">GET</span>/api/Staff/grades</p>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-info">No grades assigned yet.</div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover align-middle border">
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                        <th>Assigned On</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var grade in Model)
+                    {
+                        <tr>
+                            <td class="fw-semibold">@grade.StudentName</td>
+                            <td>@grade.CourseName</td>
+                            <td>
+                                <span class="badge text-bg-primary">@grade.Marks</span>
+                            </td>
+                            <td>
+                                <span class="badge text-bg-success">@grade.Grade</span>
+                            </td>
+                            <td>@grade.GradedAt.ToString("dd MMM yyyy HH:mm")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <a asp-action="Index" class="btn btn-outline-secondary mt-4">Back</a>
+</div>

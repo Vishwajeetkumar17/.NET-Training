@@ -1,0 +1,39 @@
+@model ViewsForWebApi.Models.GradeRequestModel
+@{
+    ViewData["Title"] = "Assign Grade";
+}
+
+<div class="glass-card p-4">
+    <h2 class="page-title mb-1">Assign Grade</h2>
+    <p class="text-muted mb-4"><span class="route-chip">POST</span>/api/Staff/grade</p>
+
+    @if (ViewBag.Success != null)
+    {
+        <div class="alert alert-success">@ViewBag.Success</div>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <form asp-action="StaffGrade" method="post" class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="StudentId" class="form-label"></label>
+            <input asp-for="StudentId" class="form-control" />
+            <span asp-validation-for="StudentId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Grade" class="form-label"></label>
+            <input asp-for="Grade" class="form-control" />
+            <span asp-validation-for="Grade" class="text-danger"></span>
+        </div>
+        <div class="col-12 d-flex gap-2">
+            <button type="submit" class="btn btn-primary px-4">Assign</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Back</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
