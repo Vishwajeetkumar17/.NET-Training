@@ -1,0 +1,30 @@
+﻿@model MultiViewExample.Models.DashboardViewModel
+
+<h2>User Dashboard</h2>
+
+<div style="margin-bottom: 20px;">
+    <a asp-action="CreateUser" style="padding: 10px 15px; background-color: #28a745; color: white; text-decoration: none; border-radius: 3px;">
+        ➕ Create New User
+    </a>
+</div>
+
+<div>
+    @Html.Partial("_UserDetails", Model.User)
+</div>
+
+<div>
+    @Html.Partial("_Orders", Model.Orders)
+</div>
+
+<hr />
+
+<div style="background-color: #f0f0f0; padding: 15px; margin-top: 20px;">
+    <h3>📊 Data Flow Demonstration:</h3>
+    <p><b>OUTPUT Flow (Displaying User):</b></p>
+    <ol>
+        <li>✅ Database returns <code>User</code> Entity (with password)</li>
+        <li>✅ Controller maps <code>User</code> → <code>UserDTO</code> (password excluded)</li>
+        <li>✅ <code>UserDTO</code> sent to View (password hidden)</li>
+        <li>✅ User sees only Name and Email (above)</li>
+    </ol>
+</div>

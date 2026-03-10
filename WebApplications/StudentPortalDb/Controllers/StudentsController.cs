@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StudentPortalDb.DTO;
 using StudentPortalDb.Models;
 using StudentPortalDb.Services;
 
@@ -16,18 +18,34 @@ namespace StudentPortalDb.Controllers
             _service = service;
         }
 
+        private DateTime GetIndianTime()
+        {
+            TimeZoneInfo istZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata");
+            return TimeZoneInfo.ConvertTime(DateTime.Now, istZone);
+        }
+
         public async Task<IActionResult> Index(string q = null)
         {
-            var items = await _service.SearchAsync(q);
+            var students = await _service.SearchAsync(q);
+            var items = students.Select(StudentDto.Map).ToList();
             ViewBag.Query = q ?? "";
             return View(items);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetStudentListAsync(string q = null)
+        {
+            var students = await _service.SearchAsync(q);
+            var response = students.Select(StudentDto.Map).ToList();
+            return Json(response);
         }
 
         [HttpGet]
         public async Task<IActionResult> Search(string q)
         {
             var students = await _service.SearchAsync(q);
-            return Json(students);
+            var response = students.Select(StudentDto.Map).ToList();
+            return Json(response);
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -45,32 +63,33 @@ namespace StudentPortalDb.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            return View(new CreateStudentDto());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(
-            [Bind("FullName,Email,Phone")] Student student,
-            string JoinDate)
+        public async Task<IActionResult> Create(CreateStudentDto request)
         {
-            if (string.IsNullOrWhiteSpace(JoinDate))
+            if (!ModelState.IsValid)
+                return View(request);
+
+            if (await _service.EmailExistsAsync(request.Email))
             {
-                ModelState.AddModelError("JoinDate", "Join Date is required.");
-                return View(student);
+                ModelState.AddModelError(nameof(request.Email), "Email already exists.");
+                return View(request);
             }
 
-            if (await _service.EmailExistsAsync(student.Email))
+            var student = new Student
             {
-                return RedirectToAction("Index", "Students");
-            }
-
-            student.JoinDate = DateOnly.Parse(JoinDate);
-            student.Status = "Active";
-            student.CreatedAt = DateTime.Now;
+                FullName = request.FullName,
+                Email = request.Email,
+                Phone = request.Phone,
+                JoinDate = request.JoinDate,
+                Status = "Active",
+                CreatedAt = GetIndianTime()
+            };
 
             await _service.AddAsync(student);
-
             return RedirectToAction(nameof(Index));
         }
 
@@ -84,35 +103,45 @@ namespace StudentPortalDb.Controllers
             if (student == null)
                 return NotFound();
 
-            return View(student);
+            var editDto = EditStudentDto.Map(student);
+            return View(editDto);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,
-            [Bind("StudentId,FullName,Email,Phone,Status,JoinDate")] Student student)
+        public async Task<IActionResult> Edit(int id, EditStudentDto request)
         {
-            if (id != student.StudentId)
+            if (id != request.StudentId)
                 return NotFound();
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    await _service.UpdateAsync(student);
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!await _service.ExistsAsync(student.StudentId))
-                        return NotFound();
-                    else
-                        throw;
-                }
+            if (!ModelState.IsValid)
+                return View(request);
 
+            try
+            {
+                // Get the tracked instance from database
+                var existingStudent = await _service.GetByIdAsync(id);
+                if (existingStudent == null)
+                    return NotFound();
+
+                // Update only the allowed fields on the tracked instance
+                existingStudent.FullName = request.FullName;
+                existingStudent.Email = request.Email;
+                existingStudent.Phone = request.Phone;
+                existingStudent.Status = request.Status;
+                existingStudent.JoinDate = request.JoinDate;
+                // CreatedAt is automatically preserved
+
+                await _service.UpdateAsync(existingStudent);
                 return RedirectToAction(nameof(Index));
             }
-
-            return View(student);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!await _service.ExistsAsync(request.StudentId))
+                    return NotFound();
+                else
+                    throw;
+            }
         }
 
         public async Task<IActionResult> Delete(int? id)

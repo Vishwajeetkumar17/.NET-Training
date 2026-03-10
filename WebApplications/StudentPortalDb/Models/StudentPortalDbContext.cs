@@ -65,7 +65,6 @@ public partial class StudentPortalDbContext : DbContext
         {
             entity.HasIndex(e => e.Email, "UX_Students_Email").IsUnique();
 
-            entity.Property(e => e.CreatedAt).HasDefaultValueSql("(sysdatetime())", "DF_Students_CreatedAt");
             entity.Property(e => e.Email).HasMaxLength(180);
             entity.Property(e => e.FullName).HasMaxLength(120);
             entity.Property(e => e.Phone).HasMaxLength(30);

@@ -1,0 +1,12 @@
+﻿@model List<MultiViewExample.Models.Order>
+
+<div style="border:1px solid gray; padding:15px;">
+    <h3>User Orders</h3>
+
+    <ul>
+        @foreach (var order in Model)
+        {
+            <li>@order.OrderName</li>
+        }
+    </ul>
+</div>

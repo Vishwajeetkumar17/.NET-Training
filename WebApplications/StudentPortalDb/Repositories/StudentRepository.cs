@@ -25,7 +25,6 @@ namespace StudentPortalDb.Repositories
             }
 
             return await query
-                .AsNoTracking()
                 .OrderByDescending(s => s.CreatedAt)
                 .ToListAsync();
         }

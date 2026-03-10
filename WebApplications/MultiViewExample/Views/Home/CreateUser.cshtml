@@ -1,0 +1,42 @@
+@model MultiViewExample.Models.CreateUserDTO
+
+<h2>Create New User</h2>
+
+<form asp-action="CreateUser" method="post">
+    <div style="max-width: 500px; padding: 20px; border: 1px solid #ccc;">
+        
+        <div style="margin-bottom: 15px;">
+            <label><b>Name:</b></label><br />
+            <input type="text" asp-for="Name" style="width: 100%; padding: 5px;" />
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label><b>Email:</b></label><br />
+            <input type="email" asp-for="Email" style="width: 100%; padding: 5px;" />
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label><b>Password:</b></label><br />
+            <input type="password" asp-for="Password" style="width: 100%; padding: 5px;" />
+        </div>
+
+        <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">
+            Create User
+        </button>
+        
+        <a asp-action="Dashboard" style="margin-left: 10px;">Cancel</a>
+    </div>
+</form>
+
+<hr />
+
+<h3>📊 Data Flow Demonstration:</h3>
+<div style="background-color: #f0f0f0; padding: 15px; margin-top: 20px;">
+    <p><b>INPUT Flow (Creating User):</b></p>
+    <ol>
+        <li>✅ User fills this form (including password)</li>
+        <li>✅ Form submits <code>CreateUserDTO</code> to controller</li>
+        <li>✅ Controller maps <code>CreateUserDTO</code> → <code>User</code> Entity</li>
+        <li>✅ User Entity saved to Database</li>
+    </ol>
+</div>

@@ -22,7 +22,7 @@ namespace StudentPortalDb
 
             var app = builder.Build();
 
-            // Initialize database
+            // Initialize database and fix invalid timestamps
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -30,11 +30,26 @@ namespace StudentPortalDb
                 {
                     var context = services.GetRequiredService<StudentPortalDbContext>();
                     context.Database.EnsureCreated();
+
+                    // Fix students with 0001-01-01 CreatedAt timestamps
+                    var invalidStudents = context.Students
+                        .Where(s => s.CreatedAt.Year == 1)
+                        .ToList();
+
+                    if (invalidStudents.Count > 0)
+                    {
+                        var now = DateTime.UtcNow.AddMinutes(330);
+                        foreach (var student in invalidStudents)
+                        {
+                            student.CreatedAt = now;
+                        }
+                        context.SaveChanges();
+                    }
                 }
                 catch (Exception ex)
                 {
                     var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred while seeding the database.");
+                    logger.LogError(ex, "An error occurred while initializing the database.");
                 }
             }
 
