@@ -29,7 +29,7 @@ namespace MVCProject.Services
         {
             try
             {
-                var client = _httpClientFactory.CreateClient("FoodApi");
+                var client = _httpClientFactory.CreateClient("FoodApi"); 
                 return await client.GetFromJsonAsync<Food>($"api/Food/{id}");
             }
             catch
